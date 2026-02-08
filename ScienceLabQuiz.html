@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lumens learning Portal</title>
+    <link rel="icon" type="image/png" href="images/lumens-education-logo.png">
+</head>
+
+<body>
+    <img src="images/lumens-education-logo-2.png">
+<div class="header">
+  <a href="home.html" class="homebtn">Home</a>
+<h1 id="welcome">Science lab Quiz</h1>
+</div>
+<div class="content-scilab">
+<!--- change from here-->
+<form id="quizForm">
+
+  <p>1. Which of the following should be worn in a science lab for safety?</p>
+  <input type="radio" name="q1" value="A"> Slippers<br>
+  <input type="radio" name="q1" value="B"> Lab coat<br>
+  <input type="radio" name="q1" value="C"> Loose clothes<br>
+  <input type="radio" name="q1" value="D"> No shoes<br><br>
+
+  <p>2. Which of these is used to measure temperature in the lab?</p>
+  <input type="radio" name="q2" value="A"> Barometer<br>
+  <input type="radio" name="q2" value="B"> Thermometer<br>
+  <input type="radio" name="q2" value="C"> Balance<br>
+  <input type="radio" name="q2" value="D"> Ruler<br><br>
+
+  <p>3. Which glassware is used to mix liquids?</p>
+  <input type="radio" name="q3" value="A"> Test tube<br>
+  <input type="radio" name="q3" value="B"> Beaker<br>
+  <input type="radio" name="q3" value="C"> Microscope<br>
+  <input type="radio" name="q3" value="D"> Burner<br><br>
+
+  <p>4. What should you do if a chemical spills on your hand?</p>
+  <input type="radio" name="q4" value="A"> Ignore it<br>
+  <input type="radio" name="q4" value="B"> Wash with plenty of water<br>
+  <input type="radio" name="q4" value="C"> Taste it<br>
+  <input type="radio" name="q4" value="D"> Smell it<br><br>
+
+  <p>5. Which instrument is used to see very small objects?</p>
+  <input type="radio" name="q5" value="A"> Telescope<br>
+  <input type="radio" name="q5" value="B"> Microscope<br>
+  <input type="radio" name="q5" value="C"> Magnifying glass<br>
+  <input type="radio" name="q5" value="D"> Periscope<br><br>
+
+  <p>6. Which flame is safest for heating in the lab?</p>
+  <input type="radio" name="q6" value="A"> Yellow flame<br>
+  <input type="radio" name="q6" value="B"> Blue flame<br>
+  <input type="radio" name="q6" value="C"> Red flame<br>
+  <input type="radio" name="q6" value="D"> Orange flame<br><br>
+
+  <p>7. Which of these should NOT be done in a science lab?</p>
+  <input type="radio" name="q7" value="A"> Following teacher’s instructions<br>
+  <input type="radio" name="q7" value="B"> Eating food<br>
+  <input type="radio" name="q7" value="C"> Wearing safety goggles<br>
+  <input type="radio" name="q7" value="D"> Handling equipment carefully<br><br>
+
+  <p>8. Which tool is used to measure length?</p>
+  <input type="radio" name="q8" value="A"> Thermometer<br>
+  <input type="radio" name="q8" value="B"> Ruler<br>
+  <input type="radio" name="q8" value="C"> Weighing balance<br>
+  <input type="radio" name="q8" value="D"> Stopwatch<br><br>
+
+  <p>9. Before starting an experiment, we should:</p>
+  <input type="radio" name="q9" value="A"> Play with chemicals<br>
+  <input type="radio" name="q9" value="B"> Read instructions carefully<br>
+  <input type="radio" name="q9" value="C"> Taste substances<br>
+  <input type="radio" name="q9" value="D"> Run around the lab<br><br>
+
+  <p>10. Who should students report accidents to in the lab?</p>
+  <input type="radio" name="q10" value="A"> Friends<br>
+  <input type="radio" name="q10" value="B"> Teacher<br>
+  <input type="radio" name="q10" value="C"> Class monitor<br>
+  <input type="radio" name="q10" value="D"> Nobody<br><br>
+
+  <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+</form>
+
+<div id="result"></div>
+
+<script>
+  function checkAnswers() {
+    let score = 0;
+
+    const answers = {
+      q1: "B",
+      q2: "B",
+      q3: "B",
+      q4: "B",
+      q5: "B",
+      q6: "B",
+      q7: "B",
+      q8: "B",
+      q9: "B",
+      q10: "B"
+    };
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected && selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    document.getElementById("result").innerText =
+      "You scored " + score + " out of 10";
+  }
+</script>
+
+<!--To here-->
+</body>
+
+</html>

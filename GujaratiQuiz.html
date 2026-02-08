@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lumens learning Portal</title>
+    <link rel="icon" type="image/png" href="images/lumens-education-logo.png">
+</head>
+
+<body>
+    <img src="images/lumens-education-logo-2.png">
+<div class="header">
+  <a href="home.html" class="homebtn">Home</a>
+<h1 id="welcome">Gujarati Quiz</h1>
+</div>
+<div class="content-Guj">
+<!--- change from here-->
+<form id="quizForm">
+
+  <p>1. નીચેના પૈકી સંજ્ઞા (Noun) કયો છે?</p>
+  <input type="radio" name="q1" value="A"> દોડવું<br>
+  <input type="radio" name="q1" value="B"> સુંદર<br>
+  <input type="radio" name="q1" value="C"> શાળા<br>
+  <input type="radio" name="q1" value="D"> ઝડપથી<br><br>
+
+  <p>2. ખાલી જગ્યા ભરો: હું રોજ શાળાએ ___ છું.</p>
+  <input type="radio" name="q2" value="A"> જાય<br>
+  <input type="radio" name="q2" value="B"> જાય છે<br>
+  <input type="radio" name="q2" value="C"> ગયા<br>
+  <input type="radio" name="q2" value="D"> જશે<br><br>
+
+  <p>3. સર્વનામ (Pronoun) કયું છે?</p>
+  <input type="radio" name="q3" value="A"> રામ<br>
+  <input type="radio" name="q3" value="B"> પુસ્તક<br>
+  <input type="radio" name="q3" value="C"> તે<br>
+  <input type="radio" name="q3" value="D"> શાળા<br><br>
+
+  <p>4. “સુંદર ફૂલ” માં વિશેષણ (Adjective) કયું છે?</p>
+  <input type="radio" name="q4" value="A"> સુંદર<br>
+  <input type="radio" name="q4" value="B"> ફૂલ<br>
+  <input type="radio" name="q4" value="C"> માં<br>
+  <input type="radio" name="q4" value="D"> અને<br><br>
+
+  <p>5. “છોકરો” નો બહુવચન કયો છે?</p>
+  <input type="radio" name="q5" value="A"> છોકરો<br>
+  <input type="radio" name="q5" value="B"> છોકરાં<br>
+  <input type="radio" name="q5" value="C"> છોકરી<br>
+  <input type="radio" name="q5" value="D"> છોકરાઓ<br><br>
+
+  <p>6. નીચેના પૈકી ક્રિયા (Verb) કયું છે?</p>
+  <input type="radio" name="q6" value="A"> પુસ્તક<br>
+  <input type="radio" name="q6" value="B"> રમે છે<br>
+  <input type="radio" name="q6" value="C"> સુંદર<br>
+  <input type="radio" name="q6" value="D"> શાળા<br><br>
+
+  <p>7. પ્રશ્નાર્થ વાક્યના અંતે કયો ચિહ્ન આવે છે?</p>
+  <input type="radio" name="q7" value="A"> .<br>
+  <input type="radio" name="q7" value="B"> !<br>
+  <input type="radio" name="q7" value="C"> ?<br>
+  <input type="radio" name="q7" value="D"> ,<br><br>
+
+  <p>8. નીચેના પૈકી ક્રિયાવિશેષણ (Adverb) કયું છે?</p>
+  <input type="radio" name="q8" value="A"> ધીમું<br>
+  <input type="radio" name="q8" value="B"> ધીમે<br>
+  <input type="radio" name="q8" value="C"> ધીમાપણું<br>
+  <input type="radio" name="q8" value="D"> ધીમો<br><br>
+
+  <p>9. “અમે શાળાએ જઈએ છીએ.” આ વાક્ય કાળ કયો છે?</p>
+  <input type="radio" name="q9" value="A"> ભૂતકાળ<br>
+  <input type="radio" name="q9" value="B"> વર્તમાનકાળ<br>
+  <input type="radio" name="q9" value="C"> ભવિષ્યકાળ<br>
+  <input type="radio" name="q9" value="D"> આજ્ઞાર્થકાળ<br><br>
+
+  <p>10. નીચેનું પૂરું વાક્ય કયું છે?</p>
+  <input type="radio" name="q10" value="A"> રમતાં બાળકો<br>
+  <input type="radio" name="q10" value="B"> કારણ કે વરસાદ હતો<br>
+  <input type="radio" name="q10" value="C"> બાળકો મેદાનમાં રમે છે.<br>
+  <input type="radio" name="q10" value="D"> રમતી વખતે<br><br>
+
+  <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+</form>
+
+<div id="result"></div>
+
+<script>
+  function checkAnswers() {
+    let score = 0;
+
+    const answers = {
+      q1: "C",
+      q2: "B",
+      q3: "C",
+      q4: "A",
+      q5: "D",
+      q6: "B",
+      q7: "C",
+      q8: "B",
+      q9: "B",
+      q10: "C"
+    };
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected && selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    document.getElementById("result").innerText =
+      "You scored " + score + " out of 10";
+  }
+</script>
+
+ 
+<!--To here-->
+</body>
+
+</html>

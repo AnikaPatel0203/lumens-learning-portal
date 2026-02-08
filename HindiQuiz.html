@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lumens learning Portal</title>
+    <link rel="icon" type="image/png" href="images/lumens-education-logo.png">
+</head>
+
+<body>
+    <img src="images/lumens-education-logo-2.png">
+<div class="header">
+  <a href="home.html" class="homebtn">Home</a>
+<h1 id="welcome">Hindi Quiz</h1>
+</div>
+<div class="content-"Hindi>
+<!--- change from here-->
+<form id="quizForm">
+
+  <p>1. निम्नलिखित में से संज्ञा कौन-सी है?</p>
+  <input type="radio" name="q1" value="A"> दौड़ना<br>
+  <input type="radio" name="q1" value="B"> सुंदर<br>
+  <input type="radio" name="q1" value="C"> विद्यालय<br>
+  <input type="radio" name="q1" value="D"> जल्दी<br><br>
+
+  <p>2. खाली स्थान भरिए: वह रोज़ स्कूल ___ है।</p>
+  <input type="radio" name="q2" value="A"> जाना<br>
+  <input type="radio" name="q2" value="B"> जाता<br>
+  <input type="radio" name="q2" value="C"> जाता है<br>
+  <input type="radio" name="q2" value="D"> जाएगा<br><br>
+
+  <p>3. सर्वनाम कौन-सा शब्द है?</p>
+  <input type="radio" name="q3" value="A"> राम<br>
+  <input type="radio" name="q3" value="B"> किताब<br>
+  <input type="radio" name="q3" value="C"> वह<br>
+  <input type="radio" name="q3" value="D"> स्कूल<br><br>
+
+  <p>4. “सुंदर फूल” में विशेषण कौन-सा है?</p>
+  <input type="radio" name="q4" value="A"> फूल<br>
+  <input type="radio" name="q4" value="B"> सुंदर<br>
+  <input type="radio" name="q4" value="C"> में<br>
+  <input type="radio" name="q4" value="D"> और<br><br>
+
+  <p>5. “लड़का” का बहुवचन क्या है?</p>
+  <input type="radio" name="q5" value="A"> लड़का<br>
+  <input type="radio" name="q5" value="B"> लड़की<br>
+  <input type="radio" name="q5" value="C"> लड़के<br>
+  <input type="radio" name="q5" value="D"> लड़कियाँ<br><br>
+
+  <p>6. निम्नलिखित में से क्रिया कौन-सी है?</p>
+  <input type="radio" name="q6" value="A"> किताब<br>
+  <input type="radio" name="q6" value="B"> खेलता है<br>
+  <input type="radio" name="q6" value="C"> सुंदर<br>
+  <input type="radio" name="q6" value="D"> विद्यालय<br><br>
+
+  <p>7. प्रश्नवाचक वाक्य के अंत में कौन-सा चिह्न आता है?</p>
+  <input type="radio" name="q7" value="A"> ।<br>
+  <input type="radio" name="q7" value="B"> !<br>
+  <input type="radio" name="q7" value="C"> ?<br>
+  <input type="radio" name="q7" value="D"> ,<br><br>
+
+  <p>8. निम्नलिखित में से क्रिया-विशेषण कौन-सा है?</p>
+  <input type="radio" name="q8" value="A"> तेज़<br>
+  <input type="radio" name="q8" value="B"> तेज़ी से<br>
+  <input type="radio" name="q8" value="C"> तेज़ी<br>
+  <input type="radio" name="q8" value="D"> तेज़तर<br><br>
+
+  <p>9. “हम स्कूल जाते हैं।” यह वाक्य किस काल में है?</p>
+  <input type="radio" name="q9" value="A"> भूतकाल<br>
+  <input type="radio" name="q9" value="B"> वर्तमान काल<br>
+  <input type="radio" name="q9" value="C"> भविष्य काल<br>
+  <input type="radio" name="q9" value="D"> आज्ञार्थक काल<br><br>
+
+  <p>10. निम्नलिखित में से पूर्ण वाक्य कौन-सा है?</p>
+  <input type="radio" name="q10" value="A"> खेलते बच्चे<br>
+  <input type="radio" name="q10" value="B"> क्योंकि बारिश हो रही थी<br>
+  <input type="radio" name="q10" value="C"> बच्चे मैदान में खेल रहे हैं।<br>
+  <input type="radio" name="q10" value="D"> खेलते समय<br><br>
+
+  <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+</form>
+
+<div id="result"></div>
+
+<script>
+  function checkAnswers() {
+    let score = 0;
+
+    const answers = {
+      q1: "C",
+      q2: "C",
+      q3: "C",
+      q4: "B",
+      q5: "C",
+      q6: "B",
+      q7: "C",
+      q8: "B",
+      q9: "B",
+      q10: "C"
+    };
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected && selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    document.getElementById("result").innerText =
+      "You scored " + score + " out of 10";
+  }
+</script>
+
+
+<!--To here-->
+</body>
+
+</html>

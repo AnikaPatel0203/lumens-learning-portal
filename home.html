@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lumens learning Potal</title>
+    <link rel="icon" type="image/png" href="images/lumens-education-logo.png">
+</head>
+
+<body>
+    <img src="images/lumens-education-logo-2.png">
+<div class="header">
+<h1 id="welcome">Welcome, Anika!</h1>
+</div>
+
+
+<div class="Timetable">
+<h2>Grade 5 Timetable</h2>
+<table>
+    <tr>
+        <th>Day</th>
+        <th>8.15-8.30</th>
+        <th>8.30-9.20</th>
+        <th>9.20-9.35</th>
+        <th>9.35-10.25</th>
+        <th>10.25-11.15</th>
+        <th>11.15-12.05</th>
+        <th>12.05-12.35</th>
+        <th>12.35-1.25</th>
+        <th>1.25- 2.20</th>
+        <th>2.20-2.30</th>
+    </tr>
+
+    <tr>
+        <td>Monday</td>
+        <td>Meditation</td>
+        <td><a href="computer.html">Computer</a></td>
+        <td>Break</td>
+        <td><a href="/Project 8/Project 7/index.html"> Sports</a></td>
+        <td><a href="English.html">English</a></td>
+        <td><a href="Hindi.html">Hindi</a></td>
+        <td>Lunch</td>
+           <td><a href="Math.html">Maths</a></td>
+          <td><a href="EVS.html">EVS</a></td>
+        <td>Boarding</td>
+    </tr>
+
+    <tr>
+        <td>Tuesday</td>
+        <td>Meditation</td>
+         <td><a href="art.html">Art</a></td>
+        <td>Break</td>
+        <td><a href="/Project 8/Project 7/index.html"> Sports</a></td>
+          <td><a href="Gujarati.html">Gujarati</a></td>
+        <td><a href="English.html">English</a></td>
+        <td>Lunch</td>
+      <td><a href="Math.html">Maths</a></td>
+          <td><a href="EVS.html">EVS</a></td>
+        <td>Boarding</td>
+    </tr>
+
+    <tr>
+        <td>Wednesday</td>
+        <td>Meditation</td>
+        <td><a href="Gujarati.html">Gujarati</a></td>
+        <td>Break</td>
+        <td><a href="/Project 8/Project 7/index.html"> Sports</a></td>
+        <td><a href="English.html">English</a></td>
+        <td><a href="Sci lab.html">Sci Lab</a></td>
+        <td>Lunch</td>
+        <td><a href="Math.html">Maths</a></td>
+        <td><a href="Music.html">Music</a></td>
+        <td>Boarding</td>
+    </tr>
+
+    <tr>
+        <td>Thurday</td>
+        <td>Meditation</td>
+            <td><a href="Hindi.html">Hindi</a></td>
+        <td>Break</td>
+        <td><a href="/Project 8/Project 7/index.html"> Sports</a></td>
+        <td><a href="English.html">English</a></td>
+          <td><a href="Gujarati.html">Gujarati</a></td>
+        <td>Lunch</td>
+      <td><a href="art.html">Art</a></td>
+         <td><a href="EVS.html">EVS</a></td>
+        <td>Boarding</td>
+    </tr>
+
+    <tr>
+        <td>Friday</td>
+        <td>Meditation</td>
+        <td><a href="computer.html">Computer</a></td>
+        <td>Break</td>
+        <td><a href="/Project 8/Project 7/index.html"> Sports</a></td>
+       <td><a href="English.html">English</a></td>
+    <td><a href="Music.html">Music</a></td>
+        <td>Lunch</td>
+      <td><a href="Math.html">Maths</a></td>
+           <td><a href="Hindi.html">Hindi</a></td>
+        <td>Boarding</td>
+    </tr>
+</table>
+</div>
+<div class="cards">
+    <a href="feedback.html">Feedback</a>
+</div>
+
+
+<script>
+    (function(){
+
+        const key ="studentName";
+        const name = localStorage.getItem(key);
+        const welcome= document.getElementById("welcome")
+        welcome.textContent = `Welcome, ${name}!`;
+
+    })();
+</script>
+
+</body>
+
+</html>

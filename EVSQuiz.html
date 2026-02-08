@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lumens learning Portal</title>
+    <link rel="icon" type="image/png" href="images/lumens-education-logo.png">
+</head>
+
+<body>
+    <img src="images/lumens-education-logo-2.png">
+<div class="header">
+    <a href="home.html" class="homebtn">Home</a>
+<h1 id="welcome">EVS Quiz</h1>
+</div>
+<div class="content-EVS">
+<!--- change from here-->
+<form id="Quizform">
+<div class="question">
+            <p>1. Which of the following is a renewable resource?</p>
+            <input type="radio" name="q1" value="A"> Coal<br>
+            <input type="radio" name="q1" value="B"> Petroleum<br>
+            <input type="radio" name="q1" value="C"> Sunlight<br>
+            <input type="radio" name="q1" value="D"> Natural gas
+        </div>
+
+        <div class="question">
+            <p>2. The process by which plants make their food is called:</p>
+            <input type="radio" name="q2" value="A"> Respiration<br>
+            <input type="radio" name="q2" value="B"> Digestion<br>
+            <input type="radio" name="q2" value="C"> Photosynthesis<br>
+            <input type="radio" name="q2" value="D"> Transpiration
+        </div>
+
+        <div class="question">
+            <p>3. Which organ helps us to breathe?</p>
+            <input type="radio" name="q3" value="A"> Heart<br>
+            <input type="radio" name="q3" value="B"> Lungs<br>
+            <input type="radio" name="q3" value="C"> Stomach<br>
+            <input type="radio" name="q3" value="D"> Brain
+        </div>
+
+        <div class="question">
+            <p>4. Animals that eat both plants and animals are called:</p>
+            <input type="radio" name="q4" value="A"> Herbivores<br>
+            <input type="radio" name="q4" value="B"> Carnivores<br>
+            <input type="radio" name="q4" value="C"> Omnivores<br>
+            <input type="radio" name="q4" value="D"> Scavengers
+        </div>
+
+        <div class="question">
+            <p>5. Which is NOT a method of saving water?</p>
+            <input type="radio" name="q5" value="A"> Rainwater harvesting<br>
+            <input type="radio" name="q5" value="B"> Drip irrigation<br>
+            <input type="radio" name="q5" value="C"> Leaving taps open<br>
+            <input type="radio" name="q5" value="D"> Reusing water
+        </div>
+
+        <div class="question">
+            <p>6. Main source of drinking water in villages is:</p>
+            <input type="radio" name="q6" value="A"> Sea<br>
+            <input type="radio" name="q6" value="B"> Wells and hand pumps<br>
+            <input type="radio" name="q6" value="C"> Glaciers<br>
+            <input type="radio" name="q6" value="D"> Oceans
+        </div>
+
+        <div class="question">
+            <p>7. Which gas do humans breathe out?</p>
+            <input type="radio" name="q7" value="A"> Oxygen<br>
+            <input type="radio" name="q7" value="B"> Nitrogen<br>
+            <input type="radio" name="q7" value="C"> Carbon dioxide<br>
+            <input type="radio" name="q7" value="D"> Hydrogen
+        </div>
+
+        <div class="question">
+            <p>8. Cutting down trees causes:</p>
+            <input type="radio" name="q8" value="A"> More rainfall<br>
+            <input type="radio" name="q8" value="B"> Soil erosion<br>
+            <input type="radio" name="q8" value="C"> More oxygen<br>
+            <input type="radio" name="q8" value="D"> More forests
+        </div>
+
+        <div class="question">
+            <p>9. Which helps to keep surroundings clean?</p>
+            <input type="radio" name="q9" value="A"> Littering<br>
+            <input type="radio" name="q9" value="B"> Burning plastic<br>
+            <input type="radio" name="q9" value="C"> Proper waste disposal<br>
+            <input type="radio" name="q9" value="D"> Cutting trees
+        </div>
+
+        <div class="question">
+            <p>10. Which sense organ helps us to hear?</p>
+            <input type="radio" name="q10" value="A"> Eyes<br>
+            <input type="radio" name="q10" value="B"> Nose<br>
+            <input type="radio" name="q10" value="C"> Ears<br>
+            <input type="radio" name="q10" value="D"> Tongue
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function checkAnswers() {
+        let score = 0;
+        const answers = {
+            q1: "C",
+            q2: "C",
+            q3: "B",
+            q4: "C",
+            q5: "C",
+            q6: "B",
+            q7: "C",
+            q8: "B",
+            q9: "C",
+            q10: "C"
+        };
+
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            if (selected && selected.value === answers[q]) {
+                score++;
+            }
+        }
+
+        document.getElementById("result").innerHTML =
+            "You scored " + score + " out of 10";
+    }
+</script>
+
+<!--To here-->
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lumens Learning Portal</title>
+    <link rel="icon" type="image/png" href="images/lumens-education-logo.png">
+</head>
+
+<body>
+    <img src="images/lumens-education-logo-2.png">
+<div class="header">
+  <a href="home.html" class="homebtn">Home</a>
+<h1 id="welcome">Computer Quiz</h1>
+</div>
+<div class="content-comp">
+<!--- change from here-->
+<form id="quizForm">
+
+  <p>1. Which part of the computer is called the brain of the computer?</p>
+  <input type="radio" name="q1" value="A"> Monitor<br>
+  <input type="radio" name="q1" value="B"> CPU<br>
+  <input type="radio" name="q1" value="C"> Keyboard<br>
+  <input type="radio" name="q1" value="D"> Mouse<br><br>
+
+  <p>2. Which device is used to type text into the computer?</p>
+  <input type="radio" name="q2" value="A"> Mouse<br>
+  <input type="radio" name="q2" value="B"> Scanner<br>
+  <input type="radio" name="q2" value="C"> Keyboard<br>
+  <input type="radio" name="q2" value="D"> Monitor<br><br>
+
+  <p>3. Which of the following is an output device?</p>
+  <input type="radio" name="q3" value="A"> Keyboard<br>
+  <input type="radio" name="q3" value="B"> Mouse<br>
+  <input type="radio" name="q3" value="C"> Monitor<br>
+  <input type="radio" name="q3" value="D"> Joystick<br><br>
+
+  <p>4. Which type of memory is used to store data permanently?</p>
+  <input type="radio" name="q4" value="A"> RAM<br>
+  <input type="radio" name="q4" value="B"> ROM<br>
+  <input type="radio" name="q4" value="C"> Cache<br>
+  <input type="radio" name="q4" value="D"> Register<br><br>
+
+  <p>5. Which of the following is an example of system software?</p>
+  <input type="radio" name="q5" value="A"> MS Word<br>
+  <input type="radio" name="q5" value="B"> Paint<br>
+  <input type="radio" name="q5" value="C"> Windows<br>
+  <input type="radio" name="q5" value="D"> Calculator<br><br>
+
+  <p>6. What does CPU stand for?</p>
+  <input type="radio" name="q6" value="A"> Central Process Unit<br>
+  <input type="radio" name="q6" value="B"> Central Processing Unit<br>
+  <input type="radio" name="q6" value="C"> Computer Processing Unit<br>
+  <input type="radio" name="q6" value="D"> Control Processing Unit<br><br>
+
+  <p>7. Which key is used to delete text to the left of the cursor?</p>
+  <input type="radio" name="q7" value="A"> Delete<br>
+  <input type="radio" name="q7" value="B"> Enter<br>
+  <input type="radio" name="q7" value="C"> Backspace<br>
+  <input type="radio" name="q7" value="D"> Shift<br><br>
+
+  <p>8. Which device is used to print documents?</p>
+  <input type="radio" name="q8" value="A"> Scanner<br>
+  <input type="radio" name="q8" value="B"> Printer<br>
+  <input type="radio" name="q8" value="C"> Monitor<br>
+  <input type="radio" name="q8" value="D"> Speaker<br><br>
+
+  <p>9. Which of the following is NOT hardware?</p>
+  <input type="radio" name="q9" value="A"> Mouse<br>
+  <input type="radio" name="q9" value="B"> Keyboard<br>
+  <input type="radio" name="q9" value="C"> Windows<br>
+  <input type="radio" name="q9" value="D"> Monitor<br><br>
+
+  <p>10. Which storage device is used to store large amounts of data?</p>
+  <input type="radio" name="q10" value="A"> RAM<br>
+  <input type="radio" name="q10" value="B"> Hard Disk<br>
+  <input type="radio" name="q10" value="C"> Cache<br>
+  <input type="radio" name="q10" value="D"> Register<br><br>
+
+  <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+</form>
+
+<div id="result"></div>
+
+<script>
+  function checkAnswers() {
+    let score = 0;
+
+    const answers = {
+      q1: "B",
+      q2: "C",
+      q3: "C",
+      q4: "B",
+      q5: "C",
+      q6: "B",
+      q7: "C",
+      q8: "B",
+      q9: "C",
+      q10: "B"
+    };
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected && selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    document.getElementById("result").innerText =
+      "You scored " + score + " out of 10";
+  }
+</script>
+
+
+<!--To here-->
+</body>
+
+</html>
