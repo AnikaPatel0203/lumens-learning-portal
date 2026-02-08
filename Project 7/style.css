@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(127, 170, 235);
+}
+
+
+#banner{
+    width:100% ;
+}
+
+section{
+    margin: 10px;
+}
+
+#nav-bar{
+    background-color: rgb(2, 28, 107);
+ padding: 10px;
+ margin:0;
+text-align: center;
+}
+
+a{
+    color: white;
+    font-size: 20px;
+}
+
+.nav{
+    padding:100px;
+}
+
+a:hover{
+font-size:30px;
+}
+
+#footer{
+    background-color: rgb(2, 28, 107);
+ padding: 10px;
+ margin:0;
+text-align: center;
+color: white;
+}
+
+h1,h2{
+    text-align: center;
+    color: rgb(230, 230, 230);
+}
+
+td{
+    padding:20px;
+    font-size: 18px;
+}
+
+#facts{
+    border: 3px solid rgb(209, 255, 43);
+}
+
+iframe{
+    margin-left: 120px;
+}
+
+.Player-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.Player-card{
+    background-color: rgba(202, 246, 240, 0.2) ;
+    border-radius: 10px;
+    box-shadow:5px 5px 10px black;
+    padding:15px;
+    text-align: center;
+
+}
+
+.Player-card img{
+    height: 200px;
+border-radius: 8px;
+
+}
+
+
+
+#Contact-us{
+    width: 100%;
+    text-align: center;
+}
+
+form-div{
+    text-align: left;
+    width: fit fit-content;
+}
+
+input{
+    padding:20px;
+    width: 400px;
+    border: none;
+}
+
+.formbutton{
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+}
+
+#thank{
+margin-left: 500px;
+}
